@@ -37,7 +37,7 @@ _Con el parámetro -c limitamos el envió de paquetes para verificar conexión (
 >Vemos una pagina por defecto de apache, que no nos brinda mucha luz sobre nada.
 >Pero, revisando un poco a fondo, nos encontramos con una cadena en la parte baja de la web:
 
-![[Pasted image 20250618022737.png]]
+![Img](/Attachments/Pasted%20image%2020250618022737.png)
 
 >Parece ser un simple comentario en el código fuente de la pagina:
 

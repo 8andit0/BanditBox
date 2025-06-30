@@ -55,6 +55,7 @@ _Por sobre la respuesta del comando que explicamos anteriormente, aplicamos:_
 >Bien, ya que tenemos la cadena en binario, según el proceso de codificado de base64, debemos separar la cadena en grupos de 6 bits exactos:
 
 ![Img](/Attachments/Pasted%20image%2020250619022904.png)
+
 _Por sobre la respuesta del comando que explicamos anteriormente, aplicamos:_
 _"fold" que nos permite dividir cadenas por linea, indicando la cantidad de caracteres de cada división con el parámetro -w_
 
@@ -63,6 +64,7 @@ _"fold" que nos permite dividir cadenas por linea, indicando la cantidad de cara
 >La primera parte, la podemos hacer con un bucle while:
 
 ![Img](/Attachments/Pasted%20image%2020250619023757.png)
+
 _Por sobre la respuesta del comando que explicamos anteriormente, aplicamos:_
 1. _Con "while read b;" estamos definiendo el bucle while que leerá el valor de la variable "b" (Respuesta linea por linear del comando anterior) hasta terminar con sus iteraciones (Es decir, en la primera iteración $b es igual a 011100, en la segunda iteración $b es igual a 000111, y así hasta terminar con las líneas)_
 2. _Con "echo '$ ((2#$b))'" estamos imprimiendo el valor por pantalla de la expresión aritmética de base 2 "2#" sobre $b para convertir en decimal_
@@ -87,8 +89,8 @@ _Como ejemplo, el decimal 2 tendría el carácter "C", o el decimal 5 tendría e
 
 ![Img](/Attachments/Pasted%20image%2020250619041733.png)
 1. _Iniciamos el bucle for definiendo la variable $i que va a iterar por la lista de decimales que tenemos en nuestro archivo "ss.txt" (Usamos cat --> $(cat ss.txt) para no tener que pasar la lista manualmente, si no pasar El Output del comando directamente al bucle)_
-2. _$i Itera sobre nuestra lista de decimales, y sobre cada iteración aplicamos la expansión de parámetros  ${tabla_b64: $i:1} que nos dará el carácter numero $i en la tabla de base 64
-Para entender mejor la expansión de parámetros "${tabla_b64: $i:1}" lo podemos ver como ---> ${ variable : posición_que_deseo_obtener_de_la_variable : caracteres_que_deseo_extraer}
+2. _"i" Itera sobre nuestra lista de decimales, y sobre cada iteración aplicamos la expansión de parámetros  $ { tabla_b64 : $ i:1} que nos dará el carácter numero "i" en la tabla de base 64
+Para entender mejor la expansión de parámetros $ { tabla_b64 : $i :1} lo podemos ver como ---> ${ variable : posición_que_deseo_obtener_de_la_variable : caracteres_que_deseo_extraer}
 
 >Lo verificamos decodificándolo:
 
@@ -98,4 +100,5 @@ Para entender mejor la expansión de parámetros "${tabla_b64: $i:1}" lo podemos
 >Como base64 opera sobre Bytes podemos convertir imágenes, PDFs, ZIPs, ejecutables...
 
 ![Img](/Attachments/Pasted%20image%2020250619212159.png)
+
 _Vemos una codificación en base64 de un binario. Base64 añade un 33% al tamaño original del binario, es decir, entrega 4 Bytes por cada 3 Bytes _
