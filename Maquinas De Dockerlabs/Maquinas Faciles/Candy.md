@@ -63,7 +63,7 @@ Si el panel esta mal configurado (tiene claves débiles, no tiene limite de soli
 >La contraseña puede estar encriptada, como no sabemos bajo que algoritmo, vamos a pasarla por CyberChef:
 
 ![\1](/Attachments/Pasted%20image%2020250510155339.png)
-_[CiberChef](https://gchq.github.io/CyberChef/) es una herramienta sumamente potente de procesamiento de datos echa por el servicio de inteligencia británico y de código abierto. Puedes verlo como una navaja suiza (permite extraer metadatos, decodificar archivos ofuscados o codificar y ofuscar payloads). Cada operación es un modulo en JavaScript que funciona 100% del lado del cliente (no tiene backend). Con su función MAGIC se puede hacer una detección automática de algoritmos, como en este caso.
+_[CiberChef](https://gchq.github.io/CyberChef/) es una herramienta sumamente potente de procesamiento de datos hecha por el servicio de inteligencia británico y de código abierto. Puedes verlo como una navaja suiza (permite extraer metadatos, decodificar archivos ofuscados o codificar y ofuscar payloads). Cada operación es un modulo en JavaScript que funciona 100% del lado del cliente (no tiene backend). Con su función MAGIC se puede hacer una detección automática de algoritmos, como en este caso.
 
 >Era una codificación el base64, si deseas hacerlo manualmente desde terminal puedes usar el mismo "base64" con la flag "-d"
 

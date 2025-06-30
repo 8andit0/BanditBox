@@ -27,7 +27,7 @@ export TERM=xterm
 export SHELL=/bin/bash
 ```
 _Le estamos diciendo a la Shell que deseamos que la variable de entorno TERM (responsable de especificar el tipo de terminal usado), sea igual a Xterm.
-Sí TERM está mal establecido en la máquina, cosas como clear, nano, vim, less, no funcionan correctamente. Y luego Establecemos /bin/bash como la Shell por defecto para que otras herramientas lo usen.
+Sí TERM está mal establecido en la máquina, cosas como clear, nano, vim, less, no funcionan correctamente. Y luego Establecemos /bin/bash como la Shell por defecto para que otras herramientas la usen.
 
 >Como no siempre podemos seguir el paso a paso, aquí hay algunas alternativas si la terminal que obtenemos nos es muy limitada:
 
