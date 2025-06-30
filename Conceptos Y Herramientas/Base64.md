@@ -89,8 +89,9 @@ _Como ejemplo, el decimal 2 tendría el carácter "C", o el decimal 5 tendría e
 
 ![Img](/Attachments/Pasted%20image%2020250619041733.png)
 1. _Iniciamos el bucle for definiendo la variable $i que va a iterar por la lista de decimales que tenemos en nuestro archivo "ss.txt" (Usamos cat --> $(cat ss.txt) para no tener que pasar la lista manualmente, si no pasar El Output del comando directamente al bucle)_
-2. _"i" Itera sobre nuestra lista de decimales, y sobre cada iteración aplicamos la expansión de parámetros  $ { tabla_b64 : $ i:1} que nos dará el carácter numero "i" en la tabla de base 64
-Para entender mejor la expansión de parámetros $ { tabla_b64 : $i :1} lo podemos ver como ---> ${ variable : posición_que_deseo_obtener_de_la_variable : caracteres_que_deseo_extraer}
+2. _"i" Itera sobre nuestra lista de decimales, y sobre cada iteración aplicamos la expansión de parámetros  $ { tabla_b64 : $ i:1} que nos dará el carácter numero "i" en la tabla de base 64.
+
+>Para entender mejor la expansión de parámetros, lo podemos ver como ---> ${ variable : posición_que_deseo_obtener_de_la_variable : caracteres_que_deseo_extraer}
 
 >Lo verificamos decodificándolo:
 
