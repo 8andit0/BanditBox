@@ -1,0 +1,180 @@
+site_name: BanditBox
+site_description: Knowledge base de ciberseguridad ofensiva en laboratorios controlados
+repo_url: https://github.com/8andit0/BanditBox
+repo_name: 8andit0/BanditBox
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Inicio: index.md
+  - Knowledge graph: knowledge-graph.md
+  - Learning paths:
+      - Overview: learning-paths/index.md
+      - Enumeration methodology: learning-paths/enumeration-methodology.md
+      - Web exploitation: learning-paths/web-exploitation.md
+      - Linux privilege escalation: learning-paths/linux-privilege-escalation.md
+      - Active Directory: learning-paths/active-directory.md
+  - Machines:
+      - Overview: machines/index.md
+      - muy-facil:
+        - BorazuwarahCTF: machines/dockerlabs/muy-facil/borazuwarahctf.md
+        - BreakMySSH: machines/dockerlabs/muy-facil/breakmyssh.md
+        - FirstHacking: machines/dockerlabs/muy-facil/firsthacking.md
+        - HedgeHog: machines/dockerlabs/muy-facil/hedgehog.md
+        - Injection: machines/dockerlabs/muy-facil/injection.md
+        - Obsession: machines/dockerlabs/muy-facil/obsession.md
+        - Tproot: machines/dockerlabs/muy-facil/tproot.md
+        - Trust: machines/dockerlabs/muy-facil/trust.md
+        - Vacaciones: machines/dockerlabs/muy-facil/vacaciones.md
+      - facil:
+        - Backend: machines/dockerlabs/facil/backend.md
+        - Candy: machines/dockerlabs/facil/candy.md
+        - Console log: machines/dockerlabs/facil/console-log.md
+        - Extraviado: machines/dockerlabs/facil/extraviado.md
+        - HiddenCat: machines/dockerlabs/facil/hiddencat.md
+        - Internship: machines/dockerlabs/facil/internship.md
+        - Library: machines/dockerlabs/facil/library.md
+        - Move: machines/dockerlabs/facil/move.md
+        - nodeclimb: machines/dockerlabs/facil/nodeclimb.md
+        - Pequeñas mentirosas: machines/dockerlabs/facil/pequenas-mentirosas.md
+        - Psycho: machines/dockerlabs/facil/psycho.md
+        - Reflection: machines/dockerlabs/facil/reflection.md
+        - SecretJenkins: machines/dockerlabs/facil/secretjenkins.md
+        - Upload: machines/dockerlabs/facil/upload.md
+        - Verdejo: machines/dockerlabs/facil/verdejo.md
+        - Vulnvault: machines/dockerlabs/facil/vulnvault.md
+        - Where Is My Web Shell: machines/dockerlabs/facil/where-is-my-web-shell.md
+  - Techniques:
+      - Overview: techniques/index.md
+      - API abuse: techniques/api-abuse.md
+      - Brute force: techniques/brute-force.md
+      - CMS exploitation: techniques/cms-exploitation.md
+      - Command Injection: techniques/command-injection.md
+      - Connectivity check: techniques/connectivity-check.md
+      - Credential extraction: techniques/credential-extraction.md
+      - Hash cracking: techniques/hash-cracking.md
+      - Local File Inclusion: techniques/lfi.md
+      - Login bypass: techniques/login-bypass.md
+      - Malicious file upload: techniques/malicious-file-upload.md
+      - Metadata analysis: techniques/metadata-analysis.md
+      - Port enumeration: techniques/port-enumeration.md
+      - Process abuse: techniques/process-abuse.md
+      - Python Library Hijacking: techniques/python-library-hijacking.md
+      - Remote Code Execution: techniques/rce.md
+      - SQL Injection: techniques/sql-injection.md
+      - SSTI: techniques/ssti.md
+      - Steganography: techniques/steganography.md
+      - sudo abuse: techniques/sudo-abuse.md
+      - SUID abuse: techniques/suid-abuse.md
+      - TTY stabilization: techniques/tty-stabilization.md
+      - Web enumeration: techniques/web-enumeration.md
+  - Tools:
+      - Overview: tools/index.md
+      - base64: tools/base64.md
+      - Burp Suite: tools/burp-suite.md
+      - CiberChef: tools/ciberchef.md
+      - CrackMapExec: tools/crackmapexec.md
+      - curl: tools/curl.md
+      - dd: tools/dd.md
+      - env: tools/env.md
+      - ExifTool: tools/exiftool.md
+      - FFUF / WFuzz: tools/ffuf-wfuzz.md
+      - find: tools/find.md
+      - Gobuster: tools/gobuster.md
+      - grep: tools/grep.md
+      - GTFOBins: tools/gtfobins.md
+      - Hydra: tools/hydra.md
+      - John the Ripper: tools/john-the-ripper.md
+      - nano: tools/nano.md
+      - Netcat: tools/netcat.md
+      - Nmap: tools/nmap.md
+      - Node.js: tools/nodejs.md
+      - Ping: tools/ping.md
+      - Python: tools/python.md
+      - rpcclient: tools/rpcclient.md
+      - Ruby: tools/ruby.md
+      - Searchsploit: tools/searchsploit.md
+      - SQLMap: tools/sqlmap.md
+      - ssh: tools/ssh.md
+      - steghide: tools/steghide.md
+      - strings: tools/strings.md
+      - sudo: tools/sudo.md
+      - Vim: tools/vim.md
+      - wget: tools/wget.md
+      - WhatWeb: tools/whatweb.md
+  - Services:
+      - Overview: services/index.md
+      - Apache: services/apache.md
+      - API: services/api.md
+      - FTP: services/ftp.md
+      - Grafana: services/grafana.md
+      - HTTP: services/http.md
+      - Jenkins: services/jenkins.md
+      - Joomla: services/joomla.md
+      - MariaDB / MySQL: services/mariadb-mysql.md
+      - Nginx: services/nginx.md
+      - Node.js service: services/nodejs-service.md
+      - PHP: services/php.md
+      - SMB / Samba: services/smb.md
+      - SSH: services/ssh.md
+      - Tomcat: services/tomcat.md
+  - Vulnerabilities:
+      - Overview: vulnerabilities/index.md
+      - Exposed error message: vulnerabilities/exposed-error-message.md
+      - Insecure file upload: vulnerabilities/insecure-file-upload.md
+      - Secret in metadata: vulnerabilities/secret-in-metadata.md
+      - sudo misconfiguration: vulnerabilities/sudo-misconfiguration.md
+      - SUID misconfiguration: vulnerabilities/suid-misconfiguration.md
+      - Unsanitized user input: vulnerabilities/unsanitized-user-input.md
+      - Weak credentials: vulnerabilities/weak-credentials.md
+  - Privilege methods:
+      - Overview: privilege_methods/index.md
+      - Hash cracking to root: privilege_methods/hash-cracking-to-root.md
+      - Process abuse: privilege_methods/process-abuse.md
+      - Python Library Hijacking: privilege_methods/python-library-hijacking.md
+      - sudo binary abuse: privilege_methods/sudo-binary-abuse.md
+      - SUID binary abuse: privilege_methods/suid-binary-abuse.md
+  - Web: web/index.md
+  - Linux: linux/index.md
+  - Privilege escalation: privilege-escalation/index.md
+  - Malware analysis: malware-analysis/index.md
+  - References:
+      - Overview: references/index.md
+      - Content inventory: _meta/content_inventory.md
+      - Relationship model: _meta/relationship_model.md
