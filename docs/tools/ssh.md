@@ -1,19 +1,19 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: ssh
 node_type: tool
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # ssh
 
 ## Proposito
 
-Herramienta detectada dentro del repositorio BanditBox. TODO: ampliar proposito y limites de uso.
+ssh aparece en BanditBox como herramienta de apoyo para la fase de initial-access. La pagina agrupa maquinas y tecnicas donde la herramienta tiene evidencia de uso o mencion relevante.
 
-## Instalacion
+## Uso operativo
 
-TODO: documentar instalacion segura y sistema recomendado.
+Mantener el uso dentro de laboratorios autorizados, registrar comandos reproducibles y separar pruebas de enumeracion de acciones que cambian estado en el objetivo.
 
 ## Comandos comunes
 

@@ -4,7 +4,7 @@
 
 ## Estado actual
 
-TODO: el repositorio contiene notas relacionadas con SMB, rpcclient y CrackMapExec, pero no se detecto una ruta completa de Active Directory en las maquinas actuales.
+El repositorio contiene notas relacionadas con SMB, rpcclient y CrackMapExec, pero no se detecto una ruta completa de Active Directory en las maquinas actuales.
 
 ## Base disponible
 

@@ -26,7 +26,7 @@ def main() -> None:
         "confidence_values": ["high", "medium", "low"],
         "evidence_values": ["explicit-text", "screenshot", "inferred", "manual-review"],
         "relation_strength_values": ["primary", "secondary", "mentioned"],
-        "rule": "Use explicit TODO markers when a field cannot be supported by repository content.",
+        "rule": "Use needs_review when a field cannot be supported by repository content.",
     }
     (META / "schema.yml").write_text(json.dumps(schema, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(data["stats"], indent=2))

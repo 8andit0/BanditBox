@@ -1,21 +1,21 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Hash cracking
 node_type: technique
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Hash cracking
 
 ## Descripcion
 
-Tecnica detectada en BanditBox. TODO: ampliar con contexto teorico y defensivo.
+El cracking de hashes convierte material cifrado o derivado en credenciales reutilizables cuando el algoritmo, formato y diccionario son adecuados. Es clave documentar formato, herramienta y evidencia.
 
-## Cuando usarla
+## Uso en laboratorio
 
-Usarla solo cuando el servicio, la vulnerabilidad y el laboratorio autorizado lo justifiquen.
+Usarla solo en laboratorios propios, CTFs o entornos con autorizacion explicita. La evidencia debe separar enumeracion, explotacion y post-explotacion para que la ruta sea reproducible.
 
-## Metodologia
+## Metodologia minima
 
 - Identificar superficie y prerequisitos.
 - Confirmar la tecnica con evidencia reproducible.
@@ -47,12 +47,6 @@ def hello():
 ```bash
 sudo apt install python2
 ```
-
-## Errores comunes
-
-- Confundir una mencion con uso real.
-- No separar fase de enumeracion y fase de explotacion.
-- Omitir mitigaciones.
 
 ## Herramientas relacionadas
 
@@ -98,8 +92,3 @@ sudo apt install python2
 - [Move](../machines/dockerlabs/facil/move.md)
 - [nodeclimb](../machines/dockerlabs/facil/nodeclimb.md)
 - [Verdejo](../machines/dockerlabs/facil/verdejo.md)
-
-## Referencias
-
-- [Knowledge graph](../knowledge-graph.md)
-- TODO: agregar referencias externas verificadas si aplica.

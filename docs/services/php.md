@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: PHP
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # PHP
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Runtime frecuente en aplicaciones web; revisar uploads, includes, sesiones, errores visibles y configuracion del servidor.
 
 ## Lista de verificacion de enumeracion
 

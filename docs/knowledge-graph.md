@@ -2,7 +2,7 @@
 
 # Knowledge graph
 
-Este grafo resume relaciones generadas desde evidencia textual del repositorio. Las relaciones inciertas se mantienen como TODO o `needs_review`.
+Este grafo resume relaciones generadas desde evidencia textual del repositorio. Las relaciones inciertas se mantienen marcadas con `needs_review`.
 
 ## Maquinas, tecnicas, herramientas y servicios
 

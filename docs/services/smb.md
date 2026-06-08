@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: SMB / Samba
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # SMB / Samba
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servicio de comparticion Windows/Samba; enumerar shares, permisos, usuarios, null sessions y credenciales reutilizadas.
 
 ## Lista de verificacion de enumeracion
 
@@ -17,16 +17,16 @@ Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versiona
 
 ## Vulnerabilidades comunes
 
-- TODO: informacion no confirmada en el contenido actual.
+- Sin relaciones confirmadas en el contenido actual.
 
 ## Herramientas comunes
 
-- TODO: informacion no confirmada en el contenido actual.
+- Sin relaciones confirmadas en el contenido actual.
 
 ## Maquinas relacionadas
 
-- TODO: no hay maquinas relacionadas confirmadas.
+- Sin maquinas relacionadas confirmadas.
 
 ## Tecnicas relacionadas
 
-- TODO: informacion no confirmada en el contenido actual.
+- Sin relaciones confirmadas en el contenido actual.

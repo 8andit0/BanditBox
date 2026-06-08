@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Jenkins
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Jenkins
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servidor de automatizacion; un acceso administrativo o mala configuracion puede permitir ejecucion de scripts, jobs o lectura de secretos.
 
 ## Lista de verificacion de enumeracion
 

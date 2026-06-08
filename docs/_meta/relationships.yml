@@ -3,7 +3,7 @@
   "generated_by": "scripts/build_relationships.py",
   "policy": {
     "precision_over_coverage": true,
-    "uncertain_data": "Use TODO or needs_review fields",
+    "uncertain_data": "Use needs_review fields with explicit rationale",
     "manual_content_policy": "Generated scripts only overwrite files with AUTO-GENERATED markers"
   },
   "canonical": {

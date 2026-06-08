@@ -1,21 +1,21 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Python Library Hijacking
 node_type: technique
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Python Library Hijacking
 
 ## Descripcion
 
-Tecnica detectada en BanditBox. TODO: ampliar con contexto teorico y defensivo.
+Python Library Hijacking aprovecha el orden de busqueda de modulos. Si un script privilegiado importa una libreria desde un directorio escribible, un modulo falso puede ejecutar codigo con esos privilegios.
 
-## Cuando usarla
+## Uso en laboratorio
 
-Usarla solo cuando el servicio, la vulnerabilidad y el laboratorio autorizado lo justifiquen.
+Usarla solo en laboratorios propios, CTFs o entornos con autorizacion explicita. La evidencia debe separar enumeracion, explotacion y post-explotacion para que la ruta sea reproducible.
 
-## Metodologia
+## Metodologia minima
 
 - Identificar superficie y prerequisitos.
 - Confirmar la tecnica con evidencia reproducible.
@@ -24,13 +24,7 @@ Usarla solo cuando el servicio, la vulnerabilidad y el laboratorio autorizado lo
 
 ## Comandos
 
-TODO: extraer comandos relevantes durante la revision manual.
-
-## Errores comunes
-
-- Confundir una mencion con uso real.
-- No separar fase de enumeracion y fase de explotacion.
-- Omitir mitigaciones.
+Sin comandos cortos extraidos automaticamente desde los writeups relacionados.
 
 ## Herramientas relacionadas
 
@@ -57,8 +51,3 @@ TODO: extraer comandos relevantes durante la revision manual.
 
 - [Library](../machines/dockerlabs/facil/library.md)
 - [Psycho](../machines/dockerlabs/facil/psycho.md)
-
-## Referencias
-
-- [Knowledge graph](../knowledge-graph.md)
-- TODO: agregar referencias externas verificadas si aplica.

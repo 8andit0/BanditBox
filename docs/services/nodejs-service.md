@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Node.js service
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Node.js service
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servicio JavaScript del lado servidor; revisar APIs, logs de consola, dependencias, child_process y exposicion de secretos.
 
 ## Lista de verificacion de enumeracion
 

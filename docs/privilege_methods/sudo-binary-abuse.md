@@ -1,17 +1,17 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: sudo binary abuse
-node_type: privilege_methods
+node_type: privilege_method
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # sudo binary abuse
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Escalada por reglas sudo demasiado permisivas, especialmente NOPASSWD o binarios interactivos capaces de ejecutar comandos.
 
-## Maquinas relacionadas
+## Uso dentro de BanditBox
 
 - [Candy](../machines/dockerlabs/facil/candy.md)
 - [HedgeHog](../machines/dockerlabs/muy-facil/hedgehog.md)
@@ -19,8 +19,3 @@ Nodo generado para completar el modelo de conocimiento.
 - [Psycho](../machines/dockerlabs/facil/psycho.md)
 - [Trust](../machines/dockerlabs/muy-facil/trust.md)
 - [Vacaciones](../machines/dockerlabs/muy-facil/vacaciones.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.

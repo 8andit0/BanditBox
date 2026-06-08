@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Apache
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Apache
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servidor HTTP comun en laboratorios Linux; conviene revisar virtual hosts, configuracion de directorios, extensiones PHP y rutas publicas.
 
 ## Lista de verificacion de enumeracion
 

@@ -1,15 +1,31 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Weak credentials
-node_type: vulnerabilities
+node_type: vulnerability
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # Weak credentials
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Credenciales debiles, por defecto o reutilizadas permiten acceso sin explotar una falla tecnica compleja. En laboratorios suele validarse con diccionarios acotados y evidencia clara del origen.
+
+## Senales de deteccion
+
+- usuarios filtrados
+- passwords en web/configuracion
+- servicios con login remoto
+- credenciales por defecto
+- reutilizacion entre servicios
+
+## Mitigacion
+
+Aplicar MFA, politicas de contrasenas, bloqueo progresivo, deteccion de intentos, rotacion de secretos y eliminacion de credenciales por defecto.
+
+## Guias externas
+
+- [https://book.hacktricks.wiki/en/generic-hacking/brute-force.html](https://book.hacktricks.wiki/en/generic-hacking/brute-force.html)
 
 ## Maquinas relacionadas
 
@@ -38,8 +54,3 @@ Nodo generado para completar el modelo de conocimiento.
 - [Verdejo](../machines/dockerlabs/facil/verdejo.md)
 - [Vulnvault](../machines/dockerlabs/facil/vulnvault.md)
 - [Where Is My Web Shell](../machines/dockerlabs/facil/where-is-my-web-shell.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.

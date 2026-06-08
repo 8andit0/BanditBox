@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: MariaDB / MySQL
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # MariaDB / MySQL
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Motor de base de datos relacional; suele relacionarse con SQLi, credenciales reutilizadas, backups o configuraciones expuestas.
 
 ## Lista de verificacion de enumeracion
 

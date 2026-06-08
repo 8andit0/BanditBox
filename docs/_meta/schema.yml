@@ -33,5 +33,5 @@
     "secondary",
     "mentioned"
   ],
-  "rule": "Use explicit TODO markers when a field cannot be supported by repository content."
+  "rule": "Use needs_review when a field cannot be supported by repository content."
 }

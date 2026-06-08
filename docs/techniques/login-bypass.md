@@ -1,21 +1,21 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Login bypass
 node_type: technique
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Login bypass
 
 ## Descripcion
 
-Tecnica detectada en BanditBox. TODO: ampliar con contexto teorico y defensivo.
+Login bypass explota fallos de logica o validacion en autenticacion. Suele aparecer cuando la aplicacion confia en parametros manipulables o concatena consultas sin controles robustos.
 
-## Cuando usarla
+## Uso en laboratorio
 
-Usarla solo cuando el servicio, la vulnerabilidad y el laboratorio autorizado lo justifiquen.
+Usarla solo en laboratorios propios, CTFs o entornos con autorizacion explicita. La evidencia debe separar enumeracion, explotacion y post-explotacion para que la ruta sea reproducible.
 
-## Metodologia
+## Metodologia minima
 
 - Identificar superficie y prerequisitos.
 - Confirmar la tecnica con evidencia reproducible.
@@ -35,12 +35,6 @@ SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contrase√
 ```bash
 SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contrase√±a';
 ```
-
-## Errores comunes
-
-- Confundir una mencion con uso real.
-- No separar fase de enumeracion y fase de explotacion.
-- Omitir mitigaciones.
 
 ## Herramientas relacionadas
 
@@ -73,8 +67,3 @@ SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contrase√
 - [Backend](../machines/dockerlabs/facil/backend.md)
 - [Injection](../machines/dockerlabs/muy-facil/injection.md)
 - [Internship](../machines/dockerlabs/facil/internship.md)
-
-## Referencias
-
-- [Knowledge graph](../knowledge-graph.md)
-- TODO: agregar referencias externas verificadas si aplica.

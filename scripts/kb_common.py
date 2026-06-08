@@ -259,7 +259,7 @@ def build_relationships() -> dict[str, Any]:
         "generated_by": "scripts/build_relationships.py",
         "policy": {
             "precision_over_coverage": True,
-            "uncertain_data": "Use TODO or needs_review fields",
+            "uncertain_data": "Use needs_review fields with explicit rationale",
             "manual_content_policy": "Generated scripts only overwrite files with AUTO-GENERATED markers",
         },
         "canonical": CANONICAL,
@@ -274,7 +274,17 @@ def write_generated(path: Path, content: str) -> None:
     if path.exists() and MARKER not in path.read_text(encoding="utf-8", errors="replace"):
         print(f"SKIP manual file: {path.relative_to(ROOT)}")
         return
-    path.write_text(MARKER + "\n\n" + content.strip() + "\n", encoding="utf-8")
+    body = content.strip()
+    if body.startswith("---\n"):
+        end = body.find("\n---", 4)
+        if end != -1:
+            end += len("\n---")
+            body = body[:end] + "\n\n" + MARKER + "\n\n" + body[end:].lstrip()
+        else:
+            body = MARKER + "\n\n" + body
+    else:
+        body = MARKER + "\n\n" + body
+    path.write_text(body + "\n", encoding="utf-8")
 
 
 def read_relationships() -> dict[str, Any]:
@@ -290,5 +300,5 @@ def label(data: dict[str, Any], group: str, item_id: str) -> str:
 
 def commands_markdown(commands: list[str]) -> str:
     if not commands:
-        return "TODO: extraer comandos relevantes durante la revision manual."
+        return "Sin comandos cortos extraidos automaticamente desde los writeups relacionados."
     return "\n\n".join("```bash\n" + command.strip() + "\n```" for command in commands[:5])

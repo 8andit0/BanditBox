@@ -1,15 +1,31 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: sudo misconfiguration
-node_type: vulnerabilities
+node_type: vulnerability
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # sudo misconfiguration
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Una mala configuracion de sudo permite ejecutar binarios o scripts con privilegios excesivos. Reglas NOPASSWD, variables preservadas o comodines pueden romper el limite entre usuario y root.
+
+## Senales de deteccion
+
+- sudo -l con NOPASSWD
+- binarios interactivos permitidos
+- scripts root editables
+- env_keep peligroso
+- wildcards en sudoers
+
+## Mitigacion
+
+Limitar comandos con rutas absolutas, evitar comodines, no preservar variables peligrosas, auditar scripts permitidos y aplicar minimo privilegio.
+
+## Guias externas
+
+- [https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html](https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/index.html)
 
 ## Maquinas relacionadas
 
@@ -19,8 +35,3 @@ Nodo generado para completar el modelo de conocimiento.
 - [Psycho](../machines/dockerlabs/facil/psycho.md)
 - [Trust](../machines/dockerlabs/muy-facil/trust.md)
 - [Vacaciones](../machines/dockerlabs/muy-facil/vacaciones.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.

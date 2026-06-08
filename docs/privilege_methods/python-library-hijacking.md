@@ -1,22 +1,17 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Python Library Hijacking
-node_type: privilege_methods
+node_type: privilege_method
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # Python Library Hijacking
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Escalada por secuestro de modulos Python cuando un script privilegiado importa librerias desde una ruta en la que el usuario puede escribir.
 
-## Maquinas relacionadas
+## Uso dentro de BanditBox
 
 - [Library](../machines/dockerlabs/facil/library.md)
 - [Psycho](../machines/dockerlabs/facil/psycho.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.

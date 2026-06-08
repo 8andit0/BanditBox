@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: API
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # API
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Superficie de endpoints consumidos por aplicaciones web o clientes; se analiza por rutas, metodos, autenticacion, autorizacion y validacion de parametros.
 
 ## Lista de verificacion de enumeracion
 

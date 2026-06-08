@@ -1,17 +1,17 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: SUID binary abuse
-node_type: privilege_methods
+node_type: privilege_method
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # SUID binary abuse
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Escalada por binarios SUID que permiten leer/escribir archivos sensibles, invocar shells o ejecutar subcomandos con privilegios elevados.
 
-## Maquinas relacionadas
+## Uso dentro de BanditBox
 
 - [Backend](../machines/dockerlabs/facil/backend.md)
 - [Candy](../machines/dockerlabs/facil/candy.md)
@@ -26,8 +26,3 @@ Nodo generado para completar el modelo de conocimiento.
 - [Vacaciones](../machines/dockerlabs/muy-facil/vacaciones.md)
 - [Verdejo](../machines/dockerlabs/facil/verdejo.md)
 - [Vulnvault](../machines/dockerlabs/facil/vulnvault.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.

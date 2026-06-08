@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: SSH
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # SSH
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Acceso remoto cifrado; validar version, usuarios, autenticacion por clave/contrasena, fuerza bruta controlada y reutilizacion de credenciales.
 
 ## Lista de verificacion de enumeracion
 

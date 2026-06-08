@@ -6,3 +6,4 @@ Thumbs.db
 .obsidian/
 site/
 __pycache__/
+.venv/

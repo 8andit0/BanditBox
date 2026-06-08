@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: HTTP
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # HTTP
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servicio web generico; requiere fingerprinting, crawling, fuzzing de rutas, revision de cabeceras, codigo fuente y parametros.
 
 ## Lista de verificacion de enumeracion
 

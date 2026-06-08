@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: FTP
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # FTP
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Servicio de transferencia de archivos; revisar acceso anonimo, banners, escritura, backups, versiones vulnerables y reutilizacion de credenciales.
 
 ## Lista de verificacion de enumeracion
 

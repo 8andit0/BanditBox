@@ -7,7 +7,7 @@
 - Precision sobre cobertura.
 - Toda relacion curada debe tener fase, confianza y evidencia.
 - Las relaciones automaticas son punto de partida, no verdad absoluta.
-- Si la informacion es incierta, usar TODO o `needs_review`.
+- Si la informacion es incierta, marcar `needs_review` y explicar la razon.
 
 ## Tipos de nodos
 

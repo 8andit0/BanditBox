@@ -1,15 +1,15 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Grafana
 node_type: service
 ---
 
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
 # Grafana
 
 ## Descripcion
 
-Servicio o tecnologia observado en maquinas de BanditBox. TODO: ampliar versionado y contexto.
+Plataforma de observabilidad; en CTFs suele aparecer por paneles expuestos, credenciales por defecto, plugins o vulnerabilidades de lectura de archivos.
 
 ## Lista de verificacion de enumeracion
 

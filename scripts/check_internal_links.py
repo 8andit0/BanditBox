@@ -28,6 +28,7 @@ def main() -> int:
     broken: list[tuple[str, str]] = []
     for path in sorted(DOCS.rglob("*.md")):
         text = path.read_text(encoding="utf-8", errors="replace")
+        text = re.sub(r"```.*?```", "", text, flags=re.S)
         for match in re.finditer(r"(?<!!)\[[^\]]+\]\(([^)]+)\)", text):
             target = match.group(1).strip()
             if not target_exists(path, target):

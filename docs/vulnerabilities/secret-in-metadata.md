@@ -1,15 +1,31 @@
-<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
-
 ---
 title: Secret in metadata
-node_type: vulnerabilities
+node_type: vulnerability
 ---
+
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
 
 # Secret in metadata
 
 ## Descripcion
 
-Nodo generado para completar el modelo de conocimiento.
+Secretos en metadatos aparecen cuando documentos, imagenes o backups conservan usuarios, rutas, comentarios, coordenadas, software o cadenas sensibles.
+
+## Senales de deteccion
+
+- EXIF con autor/ruta
+- strings legibles
+- comentarios en documentos
+- archivos comprimidos con nombres reveladores
+- pistas ocultas en imagenes
+
+## Mitigacion
+
+Limpiar metadatos antes de publicar, revisar pipelines de exportacion, bloquear secretos en repositorios y automatizar escaneo de archivos adjuntos.
+
+## Guias externas
+
+- [https://hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-methodology.html](https://hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-methodology.html)
 
 ## Maquinas relacionadas
 
@@ -22,8 +38,3 @@ Nodo generado para completar el modelo de conocimiento.
 - [Move](../machines/dockerlabs/facil/move.md)
 - [SecretJenkins](../machines/dockerlabs/facil/secretjenkins.md)
 - [Verdejo](../machines/dockerlabs/facil/verdejo.md)
-
-## PENDIENTE
-
-- TODO: ampliar contenido manualmente.
-- TODO: confirmar evidencia antes de marcar este nodo como estable.
